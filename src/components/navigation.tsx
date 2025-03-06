@@ -1,12 +1,11 @@
 import {
   SignInButton,
-  //SignOutButton,
+  SignOutButton,
   SignUpButton,
-  UserButton,
   SignedIn,
   SignedOut,
 } from "@clerk/nextjs"
-//import Link from "next/link"
+import Link from "next/link"
 export const Navigation = () => {
   return (
     <nav className="bg-[var(--background)] border-b border-[var(--foreground)]/10">
@@ -31,8 +30,8 @@ export const Navigation = () => {
               </SignUpButton>
             </SignedOut>
             <SignedIn>
-              {/*<Link href="/user-profile">Profile</Link>*/}
-              <UserButton />
+              <Link href="/user-profile">Profile</Link>
+              <SignOutButton />
             </SignedIn>
           </div>
         </div>
